@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro QR Code</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <form id="formulario">
+      <h2>Cadastro de Informações</h2>
+
+      <input
+        type="text"
+        id="nome"
+        placeholder="Nome completo"
+        required
+      /><br /><br />
+
+      <input
+        type="number"
+        id="idade"
+        placeholder="Idade"
+        required
+      /><br /><br />
+      <input
+        type="text"
+        id="condicao"
+        placeholder="Condição"
+        required
+      /><br /><br />
+      <input
+        type="text"
+        id="contato1"
+        placeholder="Contato 1"
+        required
+      /><br /><br />
+      <input type="text" id="contato2" placeholder="Contato 2" /><br /><br />
+      <input type="text" id="contato3" placeholder="Contato 3" /><br /><br />
+      <textarea id="obs" placeholder="Observações"></textarea><br /><br />
+
+      <button type="submit">Gerar QR Code</button>
+    </form>
+    <div class="qr-container">
+      <h3>📌 Seu QR Code</h3>
+
+      <div class="info">
+        <p><strong>O que é este QR Code?</strong></p>
+        <p>
+          Este código armazena as informações que você preencheu e podem ser
+          lidas pela câmera de um celular.
+        </p>
+        <br />
+
+        <p><strong>Como usar?</strong></p>
+        <p>
+          Aponte a câmera para o QR Code para visualizar os dados. <br />
+          <br />Você pode imprimir e colocar em objetos pessoais como: bolsas,
+          crachás, chaveiros.
+        </p>
+        <br />
+
+        <p class="dica">
+          📌 Gere o QR Code e salve ou imprima imediatamente para uso.
+        </p>
+      </div>
+
+      <div id="qrcode"></div>
+
+      <p class="aviso">
+        ⚠️ Não inclua informações sensíveis ou que não possam ser
+        compartilhadas.
+      </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
